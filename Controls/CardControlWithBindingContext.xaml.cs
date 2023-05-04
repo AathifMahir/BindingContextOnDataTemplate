@@ -27,6 +27,5 @@ public partial class CardControlWithBindingContext : ContentView
     public CardControlWithBindingContext()
 	{
 		InitializeComponent();
-        BindingContext = this;
 	}
 }

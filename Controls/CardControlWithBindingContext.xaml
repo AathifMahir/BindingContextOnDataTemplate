@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BindingContextOnDataTemplate.Controls"
              x:DataType="local:CardControlWithBindingContext"
-             x:Class="BindingContextOnDataTemplate.Controls.CardControlWithBindingContext">
+             x:Name="This"
+             x:Class="BindingContextOnDataTemplate.Controls.CardControlWithBindingContext" BindingContext="{Reference This}">
 
     <Border WidthRequest="150" HeightRequest="150" MaximumWidthRequest="300" MaximumHeightRequest="300" BackgroundColor="{Binding CardBackground}">
         <Border.Shadow>

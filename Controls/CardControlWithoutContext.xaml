@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BindingContextOnDataTemplate.Controls"
              x:DataType="local:CardControlWithoutContext"
-             x:Class="BindingContextOnDataTemplate.Controls.CardControlWithoutContext" x:Name="ThisControl">
+             x:Class="BindingContextOnDataTemplate.Controls.CardControlWithoutContext" x:Name="This">
     
-    <Border WidthRequest="150" HeightRequest="150" MaximumWidthRequest="300" MaximumHeightRequest="300" BackgroundColor="{Binding CardBackground, Source={Reference ThisControl}}">
+    <Border WidthRequest="150" HeightRequest="150" MaximumWidthRequest="300" MaximumHeightRequest="300" BackgroundColor="{Binding CardBackground, Source={Reference This}}">
         <Border.Shadow>
             <Shadow Brush="Black"
                 Offset="6,6"
@@ -13,8 +13,8 @@
                 Opacity="0.5" />
         </Border.Shadow>
         <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-            <Image Aspect="Center" Source="{Binding Image, Source={Reference ThisControl}}" Margin="12,12"/>
-            <Label  Text="{Binding Title, Source={Reference ThisControl}}" FontSize="Body" Margin="12,0,12,12"/>
+            <Image Aspect="Center" Source="{Binding Image, Source={Reference This}}" Margin="12,12"/>
+            <Label  Text="{Binding Title, Source={Reference This}}" FontSize="Body" Margin="12,0,12,12"/>
         </VerticalStackLayout>
     </Border>
 </ContentView>

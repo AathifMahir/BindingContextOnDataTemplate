@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BindingContextOnDataTemplate.Controls"
+             x:DataType="local:CardControlWithBindingContext"
+             x:Class="BindingContextOnDataTemplate.Controls.CardControlWithBindingContext">
+
+    <Border WidthRequest="150" HeightRequest="150" MaximumWidthRequest="300" MaximumHeightRequest="300" BackgroundColor="{Binding CardBackground}">
+        <Border.Shadow>
+            <Shadow Brush="Black"
+                Offset="6,6"
+                Radius="12"
+                Opacity="0.5" />
+        </Border.Shadow>
+        <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Aspect="Center" Source="{Binding Image}" Margin="12,12"/>
+            <Label  Text="{Binding Title}" FontSize="Body" Margin="12,0,12,12"/>
+        </VerticalStackLayout>
+    </Border>
+</ContentView>
